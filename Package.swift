@@ -11,8 +11,8 @@ let package = Package(
             name: "PrivatePackage",
             targets: ["PrivatePackage"]),
         .library(
-            name: "PrivatePackage",
-            targets: ["PrivatePackage"]),
+            name: "PublicPackage",
+            targets: ["PublicPackage"]),
     ],
     dependencies: [
         .package(

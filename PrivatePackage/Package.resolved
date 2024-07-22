@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "insider",
+      "kind" : "remoteSourceControl",
+      "location" : "git@gitlab.myteksi.net:bersama/mobile/ios/dependencies/insider.git",
+      "state" : {
+        "branch" : "13.4.2",
+        "revision" : "350ccbaf3c166313ed3021d9162972c60065300e"
+      }
+    }
+  ],
+  "version" : 2
+}

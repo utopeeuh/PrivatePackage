@@ -10,14 +10,25 @@ let package = Package(
         .library(
             name: "PrivatePackage",
             targets: ["PrivatePackage"]),
+        .library(
+            name: "PrivatePackage",
+            targets: ["PrivatePackage"]),
+    ],
+    dependencies: [
+        .package(
+            name: "InsiderSwift",
+            url: "git@gitlab.myteksi.net:bersama/mobile/ios/dependencies/insider.git",
+            branch: "13.4.2"
+        )
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "PrivatePackage"),
-        .testTarget(
-            name: "PrivatePackageTests",
-            dependencies: ["PrivatePackage"]),
+            name: "PrivatePackage",
+            dependencies: ["InsiderSwift"]
+        ),
+        .target(
+            name: "PublicPackage"),
     ]
 )
